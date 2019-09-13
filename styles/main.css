@@ -1,0 +1,116 @@
+/* Body */ 
+
+body {
+    height: auto;
+}
+
+/* Header */
+
+header {
+    padding: 10px 0 10px 0;
+    background-color: white;
+    text-align: center;
+    font-family: 'Manjari', sans-serif;
+    box-shadow: 0 1px 4px grey;
+}
+
+header h3 {
+    padding: 4px 10px 0 10px;
+    margin-bottom: 0;
+    border-top: 1px solid #007bff;
+    border-bottom: 1px solid #007bff;
+    display: inline-block;
+}
+
+/* Container */
+
+.container-fluid {
+    height: auto;
+}
+
+/* Row */
+
+.row {
+    margin-top: 20px;
+}
+
+/* Navigation */
+
+#navigation {
+    border-right: 1px solid grey;
+    font-weight: 600;
+}
+
+#navigation ul {
+    padding-right: 5px;
+}
+
+/* Home Page */
+
+#home-jumbotron {
+    padding: 0 20px 0 20px;
+    border-right: 1px solid grey;
+}
+
+.jumbotron {
+    max-height: 386px;
+    background: url("../images/home-mountains.jpg");
+}
+
+#blog-links {
+    padding-left: 20px;
+}
+
+/* Blog Entry */
+
+#blog {
+    height: auto;
+    padding: 0 20px 0 20px;
+    border-right: 1px solid grey;
+}
+
+@media screen and (max-width: 991px) {
+    
+    /* Container */
+
+    .container-fluid {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    /* Header */
+
+    header {
+        padding-bottom: 10px;
+    }
+
+    /* Navigation */
+    
+    #navigation {
+        padding-bottom: 25px;
+        border-right: none;
+        text-align: center;
+    }
+
+    #navigation ul {
+        padding-left: 5px;
+    }
+
+    /* Blog Entry */
+
+    #blog {
+        height: auto;
+        border-right: none;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Home Page */
+    
+    #home-jumbotron {
+        border-right: none;
+    }
+
+}

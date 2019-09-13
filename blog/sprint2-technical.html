@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="sticky-top">
+        <h3 class="text-primary">Richard's Blog</h1> 
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-xs-12" id="navigation">
+          <ul class="nav flex-column nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../about.html">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-xs-12" id="blog">
+          <div class="container">
+            <div class="row">
+              <h2>CSS Positioning</h2>
+            </div>
+            <div class="row">
+              <p>CSS positioning properties can often be difficult to understand. In this blog post, I will explain it as simply as possible.</p>
+              <p>The first thing to note is that all elements have a default position value of 'static'. And thus a bunch of elements will appear in the same order as they are in the HTML.</p>
+              <div class="card border-primary mx-auto">
+                <img src="../images/css-positioning/fig-1.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">These are three divs. They appear in the same order as in the HTML; top to bottom. The result is the same whether you add <em>position: static</em> to each div or just leave it out.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <h3>Relative</h3>
+              <p>An element with <em>position: relative</em> is placed <strong>relative to its original position.</strong> On its own, it acts like position: static, and you will not see any changes.</p>
+              <p>However, when you also specify some kind of horizontal and/or vertical spacing, such as <em>left: 20px</em> or <em>top: 20px</em>, the element will move while retaining the original flow of the page, including the element's original position.</p>  
+              <p>In both images below, position: relative is applied to box 2.</p>           
+              <div class="card-deck">
+                <div class="card border-primary">
+                  <img src="../images/css-positioning/fig-2.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text">left: 20px applied to Box 2.</p>
+                  </div>
+                </div>
+                <div class="card border-primary">
+                  <img src="../images/css-positioning/fig-3.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text">top: 20px applied to Box 2.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p>As you can see from the two figures, a relative element can be moved anywhere without affecting the positioning of the other two boxes, which both seem to pretend that Box 2 is in its original place.</p>      
+            </div>
+            <div class="row">
+              <h3>Absolute</h3>
+              <p>The element is positioned relative to its <strong>first positioned ancestor element</strong>, meaning the ancestor element must be positioned in some way (eg. relative, or absolute). Otherwise, positioned <strong>relative to the page itself, ie. the HTML element.</strong></p>                                        
+              <p>Applying this removes the element from the flow of the page, and allows the element to be positioned anywhere.</p>
+              <div class="card border-primary mx-auto">
+                <img src="../images/css-positioning/fig-4.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">No absolute positioning applied. Note that the box inside Box 3 is a child element of Box 3.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card-deck">
+                <div class="card border-primary">
+                  <img src="../images/css-positioning/fig-5.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text"><em>position: absolute</em> applied to the child box inside Box 3. It dissociates from its parent element, going outside it.</p>
+                  </div>
+                </div>
+                <div class="card border-primary">
+                  <img src="../images/css-positioning/fig-6.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text"><em>position: absolute, left: 120px</em> and <em>top: 50px</em> applied to the child box inside Box 3.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p>As you can see in the second picture, the child box reads the top positioning as the <strong>top of the page</strong> rather than the top of its parent element, Box 3. This is because there is no kind of positioning applied to Box 3, therefore the child box is relative to the whole page.</p>
+            </div>
+            <div class="row">
+              <div class="card border-primary mx-auto" style="width: 50%;">
+                <img src="../images/css-positioning/fig-7.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">Add <em>position: absolute</em> to Box 3, and then the child box is now below it.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <h3>Fixed</h3>
+              <p>With <em>position: fixed</em>, the positioning of an element is <strong>relative to the viewport.</strong> This means that the element will stay in the same place no matter what, whether the page is scrolled or the screen is resized; the element is completely removed from the flow of the page.</p>
+              <p>For example, the header on this page saying 'Richard's Blog' never moves even when scrolled or resized, because it has <em>position: fixed</em>.</p>
+              <p>Let's take a look at the YouTube homepage.</p>
+            </div>
+            <div class="row">
+              <div class="card border-primary mx-auto" style="width: 80%;">
+                <img src="../images/css-positioning/fig-8.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">YouTube home page at full screen size and scrolled to top. Notice the header and the sidebar.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card border-primary mx-auto" style="width: 80%;">
+                <img src="../images/css-positioning/fig-9.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">The page is scrolled down a bit, and you can see the header and the sidebar are still in their exact same position, because they have <em>position: fixed.</em></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card border-primary mx-auto" style="width: 80%;">
+                <img src="../images/css-positioning/fig-10.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">The page is resized, and the header remains.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <br>
+              <h4 style="text-align: center;">I hope you now know the difference between relative, absolute and fixed!</h4>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12" id="blog-links">
+          <h2>Explore my blog</h2>
+          <br>
+          <h4><a href="sprint1-cultural.html">Values & Identity</a></h4>
+          <h4><a href="sprint2-cultural.html">Learning Plan</a></h4>
+          <h4><a href="sprint2-technical.html">CSS Positioning</a></h4>
+        </div>
+      </div>
+      <footer>
+        <br>
+      </footer>
+  </body>
+</html>
