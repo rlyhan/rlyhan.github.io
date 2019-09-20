@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="sticky-top">
+        <h3 class="text-primary">Richard's Blog</h1> 
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-xs-12" id="navigation">
+          <ul class="nav flex-column nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../about.html">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-xs-12" id="blog">
+          <div class="container">
+            <div class="row">
+              <h2>HTML, CSS and JavaScript</h2>
+            </div>
+            <div class="row">
+              <h3>Difference Between HTML and CSS</h3>
+              <p>HTML is the language used to write the content and structure of a webpage, while CSS is the language used to write how the content will be displayed, in terms of things like positioning, colour, etc.</p>
+              <p>Think of HTML as an art gallery. The art gallery is a simple, plain, box-like gigantic room with no partitioning walls. There are lots of paintings hung up on walls, but they are just placed one after the other with no spacing on just one wall, and not evenly placed throughout the gallery.</p>
+              <p>Think of CSS as the interior architect and designer. CSS would add things like partitioning walls and paint the walls, and spread the paintings out so that there are no walls missing paintings, and generally adding a sense of visual balance and pleasure.</p>           
+            </div>
+            <div class="row">
+              <h3>Control flow and loops</h3>
+              <p><strong>Control flow</strong>, in a computer program, is the step-by-step order in which each action of the program will happen. Following a specific sequence is usually necessary to make the whole program work. Think of grabbing a bite to eat from the fridge. You open the fridge, take the food out, put it in the microwave, heat it, take it out the microwave, and then eat it. You can't eat the food unless you take it out the fridge first, nor can you take it out the microwave unless you put it in there first.</p>
+              <p><strong>Loops</strong> in a computer program is an action, or a series of actions, that is repeated a certain number of times. Think of a workout at the gym. You will do a set of bicep curls, in which you will do 12 repetitions. When you do a curl, you will lift the barbell up, and then lower it down. You will repeat those two actions: lift and lower - 12 times.</p> 
+            </div>
+            <div class="row">
+              <h3>Document Object Model</h3>
+              <p>The document object model (DOM) represents a file, eg. HTML, as a logical structure, and treats every part of the file, eg. an element, as an individual object.</p>
+              <p>If you were to open a website in Google Chrome, and use the Developer Tools, the DOM is represented as the HTML for the webpage, which allows for each element in the HTML to be selected individually and show information about the element.</p>
+              <p>For example, if you were on somebody's Facebook page, you could right click on their name. You will see details such as the font type and colour used. You could then change their name to whatever you like.</p>           
+            </div>
+            <div class="row">
+              <h3>Accessing Info in Arrays vs Objects</h3>
+              <p>An array is a variable that holds multiple values. They are often used as lists, for example a list of strings of all the names of students in a class. This can include identical values.</p>
+              <p><strong>var students = ["James", "Sarah", "Chris", "Jane", "Eric", "James", "John"];</strong></p>
+              <p>You can access values in an array through indexing. In the above example, to get the name of the first student in the list, call <strong>students[0]</strong> and you will get <strong>James</strong>. To get the name of the last student in the list, you will have to read backwards, so you need to get the size of the array first using the <em>length</em> property. Call <strong>students[students.length-1]</strong> and you will get <strong>John</strong>.</p>
+              <p>Objects are also variables that can hold multiple values. But there's a catch. They must have properties, which are used to describe a value type. Each property must have a value assigned to it.</p>
+              <p>They are often used to describe detailed information in multiple values, about a single entity. For example, a person.</p>
+              <p><strong>var person = { name: "Sam Jones", age: 40, gender: "Male" };</strong></p>
+              <p>You can access values in an object by using dot notation involving the variable name and property of the value you want, ie. <strong>object.property</strong>, for example…</p>
+              <p><strong>person.name</strong> returns <strong>Sam Jones</strong>.</p>
+              <p><strong>person.age</strong> returns <strong>40</strong>.</p>  
+            </div>
+            <div class="row">          
+              <h3>Functions</h3>
+              <p>Functions are used to do things. First you create a function and set up the things you want to do. And then, you call that function whenever you want it to do those things you have set up to do.</p>
+              <p>For example, you can make a function say "Hello" with your name. You can do this by calling the sayHello function and adding your name between brackets, for example:</p>
+              <div class="card border-primary mx-auto mb-3">
+                <img src="../images/html-css-js/fig-1.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                <div class="card-body">
+                  <p class="card-text">This outputs: Hello, Richard.</p>
+                </div>
+              </div>
+              <p>By creating functions, and naming them based on describing exactly what they do, you will make your code…</p>
+              <ul>
+                <li>Easy to read</li>
+                <li>Not be repetitive</li>
+                <li>Easier to understand in terms of the flow of logic</li>
+              </ul>
+              <p>For example, if you wanted to write a program that introduces people, saying their name, age and gender, you don't have to repeat the same commands over and over again.</p>
+              <div class="card-deck">
+                <div class="card border-primary">
+                  <img src="../images/html-css-js/fig-2.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text">This is very repetitive.</p>
+                  </div>
+                </div>
+                <div class="card border-primary">
+                  <img src="../images/html-css-js/fig-3.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
+                  <div class="card-body">
+                    <p class="card-text">This does the exact same thing, but a lot more structure and less time wasted.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12" id="blog-links">
+          <h2>Explore my blog</h2>
+          <br>
+          <h4><a href="sprint1-cultural.html">Values & Identity</a></h4>
+          <h4><a href="sprint2-cultural.html">Learning Plan</a></h4>
+          <h4><a href="sprint2-technical.html">CSS Positioning</a></h4>
+          <h4><a href="sprint3-cultural.html">EQ and IQ</a></h4>
+          <h4><a href="sprint3-technical.html">HTML, CSS and JavaScript</a></h4>
+        </div>
+      </div>
+      <footer>
+        <br>
+      </footer>
+  </body>
+</html>
