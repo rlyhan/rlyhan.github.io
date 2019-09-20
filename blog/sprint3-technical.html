@@ -39,9 +39,9 @@
             </div>
             <div class="row">
               <h3>Document Object Model</h3>
-              <p>The document object model (DOM) represents a file, eg. HTML, as a logical structure, and treats every part of the file, eg. an element, as an individual object.</p>
-              <p>If you were to open a website in Google Chrome, and use the Developer Tools, the DOM is represented as the HTML for the webpage, which allows for each element in the HTML to be selected individually and show information about the element.</p>
-              <p>For example, if you were on somebody's Facebook page, you could right click on their name. You will see details such as the font type and colour used. You could then change their name to whatever you like.</p>           
+              <p>The document object model (DOM) represents a file, eg. HTML, as a logical structure, and treats every part of the file, eg. an element, as an individual object. It is best to think of the DOM as a tree, and each element is a leaf.</p>
+              <p>If you were to open a website in Google Chrome, and use the Developer Tools, the DOM is represented as the HTML for the webpage, which allows for each element in the HTML to be selected individually. You can see various information about the element, and you can change something about the element, ie. its content or its style.</p>
+              <p>For example, if you were on John Smith's Facebook profile while using Google Chrome, you could right click on their name. Developer Tools will open and you will see details for the element containing the Facebook profile name, such as the font type and colour used. You could set the font colour to pink, or change the name from "John Smith" to "Bob Bobson".</p>           
             </div>
             <div class="row">
               <h3>Accessing Info in Arrays vs Objects</h3>
@@ -52,8 +52,7 @@
               <p>They are often used to describe detailed information in multiple values, about a single entity. For example, a person.</p>
               <p><strong>var person = { name: "Sam Jones", age: 40, gender: "Male" };</strong></p>
               <p>You can access values in an object by using dot notation involving the variable name and property of the value you want, ie. <strong>object.property</strong>, for example…</p>
-              <p><strong>person.name</strong> returns <strong>Sam Jones</strong>.</p>
-              <p><strong>person.age</strong> returns <strong>40</strong>.</p>  
+              <p><strong>person.name</strong> returns <strong>Sam Jones</strong>, while <strong>person.age</strong> returns <strong>40</strong>.</p>  
             </div>
             <div class="row">          
               <h3>Functions</h3>
@@ -62,7 +61,7 @@
               <div class="card border-primary mx-auto mb-3">
                 <img src="../images/html-css-js/fig-1.png" class="card-img-top" alt="..." style="padding: 10px 10px 10px 10px;">
                 <div class="card-body">
-                  <p class="card-text">This outputs: Hello, Richard.</p>
+                  <p class="card-text">This displays an alert that says: Hello, Richard.</p>
                 </div>
               </div>
               <p>By creating functions, and naming them based on describing exactly what they do, you will make your code…</p>
