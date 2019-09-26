@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="sticky-top">
+        <h3 class="text-primary">Richard's Blog</h1> 
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-xs-12" id="navigation">
+          <ul class="nav flex-column nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="../about.html">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-xs-12" id="blog">
+          <h2>Problem Solving</h2>
+          <br>
+          <h3>How I solved a problem I got blocked on</h3>
+            <p>
+                In this problem, I had a gradebook containing a list of four students, eg. the first student 
+                in the list is named Thomas. There was a separate list of four sets of test scores, eg. the 
+                first set of scores was [80, 70, 70, 100]. I had to add each score set to a student respective 
+                of the list ordering, eg. since Thomas is the first student in the list, his set of scores is 
+                the first set, [80, 70, 70, 100].
+            </p>
+            <p>
+                I already had the logic in my head to solve the problem. I had to go through each student in 
+                the gradebook, get the number (ie. the index) indicating the student's position in the 
+                gradebook, retrieve the set of scores at the position indicated by the index, and add it to 
+                the student.
+            </p>
+            <p>
+                I had issues with this because the gradebook was defined as a JavaScript object. I did not know 
+                how to get the index of a value in an object.
+            </p>
+            <p>
+                I used Google to find the answer. I felt a little frustrated here as I could not find an 
+                answer quickly. It wasn't until I clearly defined my problem, based on the logical solution 
+                I was trying to implement (going through a set of values and getting each value's index) and 
+                the particular problem I was having (getting an index from a value in a JavaScript object) 
+                that I was finally able to find an answer. So, I searched something like <strong>"javascript 
+                object iterate index".</strong> After looking through a few links, I found what I wanted, and 
+                it was something that I had never seen before, but I decided to try it out.
+            </p>
+            <img src="../images/problem-solving/fig-1.png" style="margin-bottom: 10px;">
+            <p>
+                I incorporated this into my code and it ended up working, I successfully managed to get the 
+                index from each value in the gradebook. I learned that to solve a particular problem when 
+                coding, you have to know your issue. And when getting help, you should be able to explain 
+                what you are trying to do and the particular concept you are having an issue with when trying 
+                to do that particular thing.
+            </p>
+            <h3>How I solved a problem in an elegant way</h3>
+            <p>
+                I was working on a piece of code where I had to <strong>capitalise the first letter of every 
+                word in a sentence</strong>. I could have used some very basic coding techniques to solve 
+                it, but it would have looked horrendous, horribly long, and have had a great potential for 
+                error.
+            </p>
+            <p>
+                To solve the problem elegantly, I wanted to use things called functions. which would each 
+                change a particular detail of the sentence, and use a different function step by step to 
+                transform the code. I was suggested to use the functions <strong>split,</strong> and 
+                <strong>join</strong>, all of which I were not familiar with, along with <strong>map</strong> 
+                and <strong>toUpperCase</strong>, which I was already familiar with. After researching online, 
+                I figured out how to use these functions and how to capitalise the first letter of all words, 
+                and solved the problem.
+            </p>
+            <p>
+                First, I wrote some <strong>pseudocode</strong> of the solution. Pseudocode is not actual 
+                code, but it is best described as, if code was transformed into simple, plain English. It is 
+                structured like code, but the actual text are just sentences describing exactly what is 
+                happening. In the pseudocode below, I described what the functions were doing as well as 
+                other actions.
+            </p>
+            <img src="../images/problem-solving/fig-2.png">
+            <p>
+                I then started writing the code one by one, by converting each line of pseudocode into actual 
+                code. To ensure each line of the code was working as expected, I used <strong>console.log
+                </strong>, which prints to the coding program whatever you want. For example, to make sure that 
+                the split function was correctly splitting a sentence <strong>eg. "hello hello"</strong>, I 
+                used console.log on the <em>result of the splitting</em> to ensure I was seeing the desired 
+                result, <strong>eg. console.log"hello","hello"</strong>
+            </p>
+            <p>
+                Following the method, I managed to get the code working. But the code was longer than necessary 
+                because every action was written independent from the other. To simplify the code, I used 
+                <strong>chaining</strong> so that each function was joined to each other, so the code could 
+                happen on just one line.
+            </p>
+            <img src="../images/problem-solving/fig-3.png">
+            <p>
+                Here, I learned that problem solving for complex problems is done best in a step by step 
+                manner, which slows the pace to make it easy to understand what's going on. And then only 
+                shorten the solution once you have actually got the solution working. It might be overwhelming 
+                to write something like the piece of code above in just one quick go.
+            </p>
+            <h3>Problem Solving Concepts</h3>
+            <p>Here I am describing how confident I am with the following methods of problem solving.</p>
+            <p>
+                <strong>Pseudocode</strong>: I know how to write fairly good pseudocode, but I do not use it 
+                that often. I think it would be useful to write it more often to perfect it, especially when 
+                I solve more complex problems in the future.
+            </p>
+            <p>
+                <strong>Trying something</strong>: As demonstrated above, trying something definitely helps 
+                in cases that cannot be solved through the knowledge you already have. I was not confident 
+                about this method before using it like I just did, but I feel more confident about it now.
+            </p>
+            <p>
+                <strong>Rubber ducky</strong>: I have yet to try this but I can see how it works. I feel 
+                fairly confident that it would work.
+            </p>
+            <p>
+                <strong>Reading error messages</strong>: I am confident in reading some error messages, such 
+                as unit test messages and errors indicating which line something went wrong on. I am a little 
+                less confident about more ambiguous error messages such as range errors or reference errors, 
+                but with practice I am sure I will be fine.
+            </p>
+            <p>
+                <strong>Console.logging</strong>: I use this method all the time so I am 100% confident with 
+                it.
+            </p>
+            <p>
+                <strong>Googling</strong>: As shown above, finding the answer on Google takes a bit more work 
+                than you think. You need to clearly define your problem and intention before knowing what kind 
+                of answer you want. I used to just Google whatever came to my head, but now that I've done it 
+                in a cohesive manner I feel more confident.
+            </p>
+            <p>
+                <strong>Asking peers for help</strong>: I am not the best at describing my problems 
+                cohesively, so I'm not too confident about asking for help. I only feel relatively confident 
+                when I've tried practically everything I can think of and can think of no better way.
+            </p>
+            <p>
+                <strong>Asking coaches for help</strong>: I have not really tried this at all or had it come 
+                to my mind so don't really feel confident nor unconfident about it.
+            </p>
+            <p>
+                <strong>Improving my process with reflection</strong>: Having done a lot of reflecting 
+                throughout these past few weeks, I think it has improved my memory with things. I have yet 
+                to master it completely, but am feeling slightly more confident with it than I was previously.
+            </p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12" id="blog-links">
+          <h2>Explore my blog</h2>
+          <br>
+          <h4><a href="sprint1-cultural.html">Values & Identity</a></h4>
+          <h4><a href="sprint2-cultural.html">Learning Plan</a></h4>
+          <h4><a href="sprint2-technical.html">CSS Positioning</a></h4>
+          <h4><a href="sprint3-cultural.html">EQ and IQ</a></h4>
+          <h4><a href="sprint3-technical.html">HTML, CSS and JavaScript</a></h4>
+          <h4><a href="sprint4-cultural.html">Neuroplasticity & Growth Mindset</a></h4>
+          <h4><a href="sprint4-technical.html">Problem Solving</a></h4>
+        </div>
+      </div>
+      <footer>
+        <br>
+      </footer>
+  </body>
+</html>
